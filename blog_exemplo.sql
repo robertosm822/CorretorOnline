@@ -45,16 +45,6 @@ INSERT INTO `contatos` (`id`, `nome`, `email`, `telefone`, `celular`, `mensagem`
 (1, 'Roberto Soares', 'robertosm822@yahoo.com.br', '(21) 3204-6433', '(21) 8628-4892', 'Segue um exemplo de contato para armazenar-se em banco de dados. Segue um exemplo de contato para armazenar-se em banco de dados. Segue um exemplo de contato para armazenar-se em banco de dados.', '2013-04-30 23:46:27'),
 (2, 'Roberto Soares', 'robertosm822@yahoo.com.br', '(21) 3204-6433', '(21) 8628-4892', 'asdfasdfas adafasdfasdf ', '2013-04-30 23:48:08'),
 (6, 'Roberto Soares', 'robertosm822', '(21) 3204-6799', '(21) 8628-4892', 'asfasd adfasdfasd', '2013-05-01 00:15:05'),
-(7, 'Roberto Soares', 'robertosm822@yahoo.com.br', '(21) 3204-6433', '(21) 8628-4892', 'asdfasdf adfasdf', '2013-05-01 00:49:13'),
-(8, 'Roberto Soares', 'robertosm822@yahoo.com.br', '(21) 3204-6433', '(21) 8628-4892', 'asdfasdf adfasdf', '2013-05-01 00:49:55'),
-(9, 'Roberto Soares', 'robertosm822@yahoo.com.br', '(21) 3204-6433', '(21) 8628-4892', 'asdfasdf adfasdf', '2013-05-01 00:52:42'),
-(10, 'Roberto Soares', 'robertosm822@yahoo.com.br', '(21) 3204-6433', '(21) 8628-4892', 'asdfasdf adfasdf', '2013-05-01 00:53:10'),
-(11, 'Roberto Soares', 'robertosm822@yahoo.com.br', '(21) 3204-6433', '(21) 8628-4892', 'asdfasdf adfasdf', '2013-05-01 00:56:56'),
-(12, 'Roberto Soares', 'robertosm822@yahoo.com.br', '(21) 3204-6433', '(21) 8628-4892', 'asdfasdf adfasdf', '2013-05-01 00:58:44'),
-(13, 'Roberto Soares', 'robertosm822@yahoo.com.br', '(21) 3204-6433', '(21) 8628-4892', 'asdfasdf adfasdf', '2013-05-01 00:59:24'),
-(14, 'Roberto Soares', 'robertosm822@yahoo.com.br', '(21) 3204-6433', '(21) 8628-4892', 'asdfasdf adfasdf', '2013-05-01 01:00:01'),
-(15, 'Roberto Soares', 'robertosm822@yahoo.com.br', '(21) 3204-6433', '(21) 8628-4892', 'asdfasdf adfasdf', '2013-05-01 01:00:33'),
-(16, 'Roberto Soares', 'robertosm822@yahoo.com.br', '(21) 3204-6433', '(21) 8628-4892', 'asdfasdf adfasdf', '2013-05-01 01:02:13'),
 (17, 'Roberto Soares', 'robertosm822@yahoo.com.br', '(21) 3204-6433', '(21) 8628-4892', 'asdfasdf adfasdf', '2013-05-01 01:02:45');
 
 -- --------------------------------------------------------
