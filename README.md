@@ -1,5 +1,4 @@
-CakePHP
-=======
+
 Projeto de inicialização de sistema para corretores de Imóveis Usando o Framework CakePHP.
 ------------------------------------------------------------------------------------------------------
 [![CakePHP](http://cakephp.org/img/cake-logo.png)](http://www.cakephp.org)
