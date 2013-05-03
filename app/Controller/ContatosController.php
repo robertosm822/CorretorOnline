@@ -4,10 +4,13 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+
 class ContatosController extends AppController {
     public $helpers = array ('Html','Form');
     public $name = 'Contatos';
     public $components = array('Email');
+	
+	
    
     //visualizador de todos os posts vindos do banco
     function index() {
@@ -21,10 +24,42 @@ class ContatosController extends AppController {
     }
      * 
      */
+
+	//mais uma tentativa de Recaptcha
+	function captcha()	{
+		$this->autoRender = false;
+		$this->layout='ajax';
+		if(!isset($this->Captcha))	{ //if Component was not loaded throug $components array()
+			$this->Captcha = $this->Components->load('Captcha', array(
+				'width' => 150,
+				'height' => 50,
+				'theme' => 'default', //possible values : default, random ; No value means 'default'
+			)); //load it
+			}
+		$this->Captcha->create();
+	}
+	 
     //metodo de adicao de nova mensagem de fale conosco
     public function faleconosco() {
-        if ($this->request->is('post')) {
-            if ($this->Contato->save($this->request->data)) {
+        if ($this->request->is('post') ) {
+		
+			if(!isset($this->Captcha))	{ //if Component was not loaded throug $components array()
+				$this->Captcha = $this->Components->load('Captcha'); //load it
+			}
+			$this->Contato->setCaptcha($this->Captcha->getVerCode()); //getting from component and passing to model to make proper validation check
+			$this->Contato->set($this->request->data);
+			if($this->Contato->validates())	{ //as usual data save call
+				//$this->Signup->save($this->request->data);//save or something
+				// validation passed, do something
+				$this->Session->setFlash('Data Validation Success');
+			}	else	{ //or
+				$this->Session->setFlash('Digito de validação não corresponde, favor tente novamente.');
+				//pr($this->Signup->validationErrors);
+				//something do something else
+			}
+			
+			
+            if ($this->Contato->save($this->request->data) ) {
                 
                //-------------------------------------------------------------
                // debug($this->request->data);

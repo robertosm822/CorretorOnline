@@ -7,6 +7,9 @@
 class Contato extends AppModel {
     public $name = 'Contato';
     
+	public $captcha = ''; //intializing captcha var
+
+
     //validacao do formulario de contato
     public $validate = array(
         'nome' => array(
@@ -32,7 +35,23 @@ class Contato extends AppModel {
             'rule'=> array('maxLength', 15),
             'rule' => array('phone', '/\((10)|([1-9][1-9])\)/', 'us'),
             'message'=>'Digite somente numeros no formato (XX) XXXX-XXXX.'
-        )
+        ),
+		'captcha'=>array(
+				'rule' => array('matchCaptcha'),
+				'message'=>'Falha na validação de verificação humana.'
+			)
                     
     );
+	
+	//---- METODOS USADOS PELO CAPTCHA IMPLEMENTADO - 03/02/2013  --------------------------
+	public function matchCaptcha($inputValue)	{
+		return $inputValue['captcha']==$this->getCaptcha(); //return true or false after comparing submitted value with set value of captcha
+	}
+	public function setCaptcha($value)	{
+		$this->captcha = $value; //setting captcha value
+	}
+	public function getCaptcha()	{
+		return $this->captcha; //getting captcha value
+	}
+	//--------------------------------------------------------------------------------------
 }
